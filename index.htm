@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentina Henriquez - Computer Engineer | Data Analyst</title>
+    <meta name="description" content="Professional portfolio of Valentina Henriquez, Computer Engineer and Data Analyst">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-color: #061aab;
+            --secondary-color: #77d017;
+            --light-color: #e4ecdb;
+            --dark-color: #333;
+            --text-color: #333;
+            --text-light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            width: 100%;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--secondary-color);
+        }
+        
+        nav {
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #5e9d11;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Presentation Section */
+        #presentation {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: var(--primary-color);
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            margin: 0 auto 2rem auto;
+            transition: var(--transition);
+        }
+        
+        .profile-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .profile-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        #presentation h2 {
+            color: var(--light-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        #presentation p {
+            color: var(--light-color);
+            font-size: 1.25rem;
+            opacity: 0.9;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .typed-text {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+            background-color: var(--primary-color);
+        }
+        
+        section {
+            margin-bottom: 4rem;
+        }
+        
+        section h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* About Section */
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--light-color);
+            text-align: center;
+            margin-top: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .education-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .education-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .education-item h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        /* Languages Section */
+        .language-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .language-item {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .language-item:hover {
+            background-color: #5e9d11;
+            transform: translateY(-5px);
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .project-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-item h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .project-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .project-links a {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: 2px solid var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .project-links a:hover {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+        
+        .project-links i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Other Skills Section */
+        .other-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .other-skill-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .other-skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .other-skill-item img {
+            width: 30px;
+            height: 30px;
+            margin-left: 0.5rem;
+            object-fit: contain;
+        }
+        
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: #5e9d11;
+        }
+        
+        footer p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-email:hover {
+            color: #5e9d11;
+            text-decoration: underline;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            html {
+                font-size: 15px;
+            }
+            
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            #presentation h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .menu-toggle {
+                display: block;
+                order: 1;
+            }
+            
+            header h1 {
+                order: 2;
+                flex: 1;
+                text-align: center;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem 0;
+                order: 3;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                text-align: center;
+                padding: 0.5rem 0;
+            }
+            
+            #presentation {
+                padding: 4rem 0;
+            }
+            
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+            
+            #presentation h2 {
+                font-size: 2rem;
+            }
+            
+            #presentation p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            section h2 {
+                font-size: 1.75rem;
+            }
+            
+            .other-skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+            
+            #presentation h2 {
+                font-size: 1.8rem;
+            }
+            
+            section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .skills-grid,
+            .education-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .language-item {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            footer {
+                clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+                padding: 2rem 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Valentina Henríquez</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#other-skills">Other Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="presentation" class="container">
+        <div class="profile-image">
+            <img src="mv.jpg" alt="Valentina Henríquez portrait" loading="lazy">
+        </div>
+        <h2>Valentina Henríquez</h2>
+        <p>Computer Engineer | <span class="typed-text"></span></p>
+    </section>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                As a highly motivated junior data analyst, I'm eager to immerse myself in the dynamic world of data
+                and contribute to meaningful projects. I possess a strong foundation in SQL,
+                Python, R, data visualization tools, etc. and I'm committed to continuously expanding my knowledge
+                and expertise. I'm passionate about uncovering actionable insights from data and leveraging them
+                to drive informed decision-making. I'm seeking opportunities where I can apply my analytical skills,
+                learn from experienced professionals, and contribute to a data-driven environment.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Leadership</div>
+                <div class="skill-item">Perseverance</div>
+                <div class="skill-item">Responsibility</div>
+                <div class="skill-item">Teamwork</div>
+                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Effective Communication</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3>Google Data Analytics Certificate</h3>
+                    <p>Google</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Engineering</h3>
+                    <p>José Antonio Páez University</p>
+                </div>
+                <div class="education-item">
+                    <h3>Basic English Course</h3>
+                    <p>Insignia Education</p>
+                </div>
+                <div class="education-item">
+                    <h3>Advanced English Course</h3>
+                    <p>Insignia Education</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <div class="language-grid">
+                <div class="language-item">Spanish: Native</div>
+                <div class="language-item">English: Advanced</div>
+                <div class="language-item">Portuguese: Advanced</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>Project: Cyclist Bike-Share</h3>
+                    <p>Case study from Google Data Analyst Certificate.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Ing-Maria-V-Henriquez/projects/tree/main/Bellabeat" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.kaggle.com/code/mariavhenriquez/valentina-henriques-bellabeat-case-study-with-r" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-database"></i> Kaggle
+                        </a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Project: Bellabeat</h3>
+                    <p>Case study from Google Data Analyst Certificate.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Ing-Maria-V-Henriquez/projects/tree/main/Bike-share" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.kaggle.com/code/mariavhenriquez/cyclist-bike-share-with-python-valentina-henriquez" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-database"></i> Kaggle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="other-skills">
+            <h2>Other Skills</h2>
+            <div class="other-skills-grid">
+                <div class="other-skill-item">HTML <img src="html-logo.png" alt="HTML logo" loading="lazy"></div>
+                <div class="other-skill-item">CSS <img src="css-logo.png" alt="CSS logo" loading="lazy"></div>
+                <div class="other-skill-item">JavaScript <img src="JavaScript-logo.png" alt="JavaScript logo" loading="lazy"></div>
+                <div class="other-skill-item">R <img src="r logo.png" alt="R logo" loading="lazy"></div>
+                <div class="other-skill-item">Excel <img src="excel-logo.png" alt="Excel logo" loading="lazy"></div>
+                <div class="other-skill-item">Python <img src="python-logo.png" alt="Python logo" loading="lazy"></div>
+                <div class="other-skill-item">Word <img src="word-logo.png" alt="Word logo" loading="lazy"></div>
+                <div class="other-skill-item">PowerPoint <img src="pp-logo.png" alt="PowerPoint logo" loading="lazy"></div>
+                <div class="other-skill-item">Tableau <img src="Tableau-Logo.jpg" alt="Tableau logo" loading="lazy"></div>
+                <div class="other-skill-item">BigQuery <img src="bigquery-logo.png" alt="BigQuery logo" loading="lazy"></div>
+                <div class="other-skill-item">MySQL <img src="MySQL-Logo.png" alt="MySQL logo" loading="lazy"></div>
+                <div class="other-skill-item">Java <img src="java-logo.png" alt="Java logo" loading="lazy"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-container">
+            <div class="social-links">
+                <a href="https://www.kaggle.com/mariavhenriquez" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+                <a href="https://github.com/Ing-Maria-V-Henriquez" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/maria-valentina-henriquez-32832a283/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p>&copy; <span id="year"></span> Valentina Henríquez. All rights reserved.</p>
+            <a href="mailto:mariavalentinahenriquez09@gmail.com" class="contact-email">
+                mariavalentinahenriquez09@gmail.com
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Typed.js initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('.typed-text', {
+                strings: ["Data Analyst", "Computer Engineer", "Problem Solver"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        document.querySelector('.nav-links').classList.remove('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
